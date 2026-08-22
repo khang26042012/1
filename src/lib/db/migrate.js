@@ -335,6 +335,13 @@ export async function runMigrationOnce(adapter) {
   // Stamp the schema version we just reached so future boots skip re-backup.
   setMetaSync(adapter, "backupSchemaVersion", SCHEMA_VERSION);
 
+  // 2.5 Seed hardcoded config if DB is fresh or has no provider connections
+  const connCount = adapter.get(`SELECT COUNT(*) as c FROM providerConnections`)?.c ?? 0;
+  if (fresh || connCount === 0) {
+    console.log(`[DB][seed] Fresh DB detected (fresh=${fresh}, connections=${connCount}), seeding hardcoded config...`);
+    seedFromHardcoded(adapter);
+  }
+
   // 3. One-time legacy JSON import (only if DB was fresh on entry)
   const alreadyImported = fs.existsSync(MIGRATED_MARKER);
   const legacyMain = readJsonSafe(LEGACY_FILES.main);
