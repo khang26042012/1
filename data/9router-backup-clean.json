@@ -1,0 +1,1414 @@
+{
+  "settings": {
+    "providerStrategies": {
+      "gemini": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 2
+      },
+      "groq": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      },
+      "openrouter": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      },
+      "mistral": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      },
+      "cerebras": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      },
+      "openai-compatible-chat-d0152569-b3ca-4179-907f-7754cdb0b43a": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      },
+      "openai-compatible-chat-3edce3e2-2d15-4e2f-89cd-d96557dec0e6": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      },
+      "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414": {
+        "fallbackStrategy": "round-robin",
+        "stickyRoundRobinLimit": 1
+      }
+    },
+    "fallbackStrategy": "round-robin",
+    "comboStrategy": "round-robin",
+    "enableObservability": true
+  },
+  "providerConnections": [
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNsSTVZM2xoZVRKUmFHOVJjbWd3VmtsT2EzVjZjR1pJYlVwYU9FMUpla05aUlZCemFEaFZkSGd5U25jPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastUsedAt": "2026-08-22T04:56:46.994Z",
+      "consecutiveUseCount": 1,
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:48.063Z",
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 10,
+      "modelLock_gemini-3.6-flash": "2026-08-22T05:01:48.063Z",
+      "id": "77327da6-136b-46e3-b6da-8b2c4c9706ba",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini",
+      "email": null,
+      "priority": 16,
+      "isActive": true,
+      "createdAt": "2026-08-19T12:55:08.822Z",
+      "updatedAt": "2026-08-22T04:56:48.063Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX2Myc3RiM0l0ZGpFdE1EVTFOakJrWmpkaVkyRmxOV0psT1RCaU1ERTJZVEV3Tm1WaE0yVmtNR1JrTjJJNU4yUTROR1U0TVdFMk0ySmtNakEyTW1RNVlUWXhPVGs1Tm1Kak1nPT1fX0I2NF9f__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": ""
+      },
+      "lastUsedAt": "2026-08-20T04:38:32.352Z",
+      "consecutiveUseCount": 1,
+      "modelLock_z-ai/glm-5.2:free": "2026-08-20T04:38:36.890Z",
+      "lastError": "[429]: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"z-ai/glm-5.2:free",
+      "errorCode": 429,
+      "lastErrorAt": "2026-08-20T04:38:32.890Z",
+      "backoffLevel": 2,
+      "id": "34ae1ae0-4873-443a-9eb4-762a692c122f",
+      "provider": "openrouter",
+      "authType": "apikey",
+      "name": "OpenRouter",
+      "email": null,
+      "priority": 1,
+      "isActive": false,
+      "createdAt": "2026-08-19T12:59:31.419Z",
+      "updatedAt": "2026-08-20T04:40:48.379Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1ZsSTRhV3BFWkhWNVZGUk9TRTFqWW5Gd1kyMXBNMEZqZEhsTFYzSklVVlE9X19CNjRfXw==__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": ""
+      },
+      "lastUsedAt": "2026-08-19T13:01:14.345Z",
+      "consecutiveUseCount": 1,
+      "id": "05765b4b-8535-43e7-9778-1babf2108452",
+      "provider": "mistral",
+      "authType": "apikey",
+      "name": "Mistral",
+      "email": null,
+      "priority": 1,
+      "isActive": false,
+      "createdAt": "2026-08-19T13:01:07.589Z",
+      "updatedAt": "2026-08-20T04:40:59.465Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1kzTnJMV1pvYWpSeWNuUTRNbWd5ZVhJNWEyVnlNbmgyZEdSbFpEbDBOR1V6Tm5jNE9YSm9jak0wTlRWeWFtTjJkamhyTkE9PV9fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": ""
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "id": "f5378eb8-7454-4bc0-8588-f84f36bb4601",
+      "provider": "cerebras",
+      "authType": "apikey",
+      "name": "Cerebras",
+      "email": null,
+      "priority": 1,
+      "isActive": false,
+      "createdAt": "2026-08-19T13:05:08.429Z",
+      "updatedAt": "2026-08-20T04:40:58.611Z"
+    },
+    {
+      "defaultModel": "deepseek/deepseek-v4-pro",
+      "apiKey": "__B64__X19CNjRfX2Myc3RlSFF0TldRd1pXWm1ZbVV4TURjeE1qSXdPRGsyWlRrMFlXRm1OVGRrTmpCbU5tVm1NakpqWkdFeVpHTXlORGM1WlRGaF9fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "prefix": "Xkiro",
+        "baseUrl": "https://api.xkiro.com/v1",
+        "nodeName": "Xkiro",
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-22T05:02:22.990Z",
+      "consecutiveUseCount": 1,
+      "modelLock_qwen/qwen3-max": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "modelLock_qwen/qwen3-coder-plus": null,
+      "modelLock_deepseek/deepseek-v4-flash": null,
+      "modelLock_qwen/qwen3.7-plus": null,
+      "modelLock_xiaomi/mimo-v2.5-pro": null,
+      "modelLock_qwen/qwen-plus-2025-07-28": null,
+      "modelLock_qwen/qwen3.8-max": null,
+      "id": "81831a83-bcb5-4b36-8439-d8dd7f4ba187",
+      "provider": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "authType": "apikey",
+      "name": "Xkiro1",
+      "email": null,
+      "priority": 5,
+      "isActive": true,
+      "createdAt": "2026-08-19T16:45:00.956Z",
+      "updatedAt": "2026-08-22T05:02:27.955Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FVbDZZVk41UVdreVpsZFRjRWh4UlhWZldYTnVOVmQwVUc5dVVIZEtjMjR0ZDA5YWF5MU5fX0I2NF9f__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-22T04:56:54.608Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "modelLock_gemini-3.6-flash": null,
+      "id": "61408c71-6728-4402-a7e7-238bdf2e3f91",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 3",
+      "email": null,
+      "priority": 15,
+      "isActive": true,
+      "createdAt": "2026-08-20T04:43:06.537Z",
+      "updatedAt": "2026-08-22T04:57:26.033Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNWQTJjMUJWWDIxaWNtOUJRVlZuWjJsR1NUTnhiM2hOZUU5Rlp6bFpZVmxPTVdoNFVtcDFXREJQZWtFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:45.659Z",
+      "lastUsedAt": "2026-08-22T04:56:44.742Z",
+      "consecutiveUseCount": 2,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 1,
+      "modelLock_gemini-3.6-flash": "2026-08-22T04:56:47.659Z",
+      "id": "2072d971-7729-463e-b6b5-775fda645df7",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 12",
+      "email": null,
+      "priority": 14,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:00.490Z",
+      "updatedAt": "2026-08-22T04:56:45.659Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNXeEJSRFl3V2tacVYwaEJkbEJUWDJWMVFWQmFTM00zTVVacFdrTnliVlY0V0ROWWVUUkNXRmhmWTFFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-21T14:26:10.454Z",
+      "lastUsedAt": "2026-08-21T14:26:05.366Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 2,
+      "modelLock_gemini-3.6-flash": "2026-08-21T14:26:14.454Z",
+      "id": "9cb392ab-ff4d-4a63-91c8-6febf7b4feba",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 13",
+      "email": null,
+      "priority": 13,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:00.765Z",
+      "updatedAt": "2026-08-21T14:26:10.454Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNsTXlVSEpUTkZOZldtbG5URTQxY1c1VGExSndRamhTTkVWSloyeEpWVVJOZUVGT1MxaFVVMDVvWkVFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-21T14:26:00.929Z",
+      "lastUsedAt": "2026-08-21T14:25:57.638Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 4,
+      "modelLock_gemini-3.6-flash": "2026-08-21T14:26:16.929Z",
+      "id": "9dfb3910-ef5e-4eb5-8dbe-ded7f9ecae4b",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 14",
+      "email": null,
+      "priority": 12,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:01.020Z",
+      "updatedAt": "2026-08-21T14:26:00.929Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlRIUlZlWHBXWmpWZlNHSkpRMkpGVjFGblFqaEpWVzVvYWxoTmJFOTJWMjVtV0VaT1YzQjBjWFpuZEVFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-21T14:26:17.587Z",
+      "lastUsedAt": "2026-08-21T14:26:10.999Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 7,
+      "modelLock_gemini-3.6-flash": "2026-08-21T14:28:25.587Z",
+      "id": "8d3868de-4f25-4a5d-96fd-de070a3d13fe",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 15",
+      "email": null,
+      "priority": 11,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:01.293Z",
+      "updatedAt": "2026-08-21T14:26:17.587Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNXODFSbFIxU21GTU5uQm9jMDVqUVV0MU1XTTVVUzFqVHpkMVRITk5iR0ppVkZKMFNURkpTbk5rYUhjPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[400]: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"User location is not supported for the API us",
+      "lastErrorAt": "2026-08-22T04:56:52.605Z",
+      "lastUsedAt": "2026-08-22T04:56:51.554Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 400,
+      "backoffLevel": 3,
+      "modelLock_gemini-3.6-flash": "2026-08-22T04:57:22.605Z",
+      "id": "db7db0fd-7f9d-4aaf-a45f-2c541248ce99",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 16",
+      "email": null,
+      "priority": 10,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:01.589Z",
+      "updatedAt": "2026-08-22T04:56:52.605Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNUaEVOVEEwVWkwME4wbHZUWHBaZVhSVlpuRjJjVVJZVFdwMVQzWmtSRjlGTWxSak0wTjJjSGd6WldjPV9fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-22T04:07:51.732Z",
+      "consecutiveUseCount": 2,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "modelLock_gemini-3.6-flash": null,
+      "id": "10c6faa4-e0b6-410d-85ff-0ba3b21c209d",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 17",
+      "email": null,
+      "priority": 9,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:01.877Z",
+      "updatedAt": "2026-08-22T04:07:59.157Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNUVmtOMWcxYWpZNVRtMXZWbEl0UWxkWWFtbDRTbTFDV0V0TFVsQmtTMDB0WXpoSU5tVXhTR05zWlhjPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:46.993Z",
+      "lastUsedAt": "2026-08-22T04:56:45.660Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 4,
+      "modelLock_gemini-3.6-flash": "2026-08-22T04:57:02.993Z",
+      "id": "3bf99c10-5e10-4b51-8474-c845ff4c67d0",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 18",
+      "email": null,
+      "priority": 8,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:02.164Z",
+      "updatedAt": "2026-08-22T04:56:46.993Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNsQjBNVFZ2YTFsalZGaG5TalJuV1cxWU5HZHFaamRGYlhSRVpVTTRWbXROTlRocFJsSnFhRTVWYVdjPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:54.607Z",
+      "lastUsedAt": "2026-08-22T04:56:53.683Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.7-flash": null,
+      "errorCode": 429,
+      "backoffLevel": 9,
+      "modelLock_gemini-3.6-flash": "2026-08-22T05:01:54.607Z",
+      "id": "666dd61c-0eb6-4e4b-8e4f-9878ba5fb28c",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 19",
+      "email": null,
+      "priority": 7,
+      "isActive": true,
+      "createdAt": "2026-08-20T05:20:02.445Z",
+      "updatedAt": "2026-08-22T04:56:54.607Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX2Myc3RlSFF0TnpFeU1XSXdZamhoTURkaE5HUm1OVE5oT1RrNU5qRTVNVEpoTkRsak1tTTRNVGxsTlRSa05URmpZMll4WWpZd19fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "prefix": "Xkiro",
+        "baseUrl": "https://api.xkiro.com/v1",
+        "nodeName": "Xkiro",
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-22T04:57:51.044Z",
+      "consecutiveUseCount": 1,
+      "modelLock_qwen/qwen-plus-2025-07-28": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "modelLock_qwen/qwen3.7-plus": null,
+      "modelLock_qwen/qwen3.8-max": null,
+      "id": "7c0f9c99-ebaf-46a9-99e5-f01219822f48",
+      "provider": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "authType": "apikey",
+      "name": "Ggsgs 1",
+      "email": null,
+      "priority": 4,
+      "isActive": true,
+      "createdAt": "2026-08-20T13:24:36.063Z",
+      "updatedAt": "2026-08-22T04:57:58.111Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX2Myc3RlSFF0TWpjek5EQTFNbVUwTTJWaU9XVmtPREpsWTJJNFpqWTJZMkUxT0dSak1XWmtPR1l6TVRKbU16ZzFNMk0wT0RVNV9fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "prefix": "Xkiro",
+        "baseUrl": "https://api.xkiro.com/v1",
+        "nodeName": "Xkiro",
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastUsedAt": "2026-08-22T05:01:09.648Z",
+      "consecutiveUseCount": 1,
+      "lastError": null,
+      "lastErrorAt": null,
+      "modelLock_qwen/qwen-plus-2025-07-28": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "modelLock_qwen/qwen3.7-plus": null,
+      "modelLock_qwen/qwen3.8-max": null,
+      "id": "90c7f055-7c0b-48af-b22b-135002c1b36e",
+      "provider": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "authType": "apikey",
+      "name": "Bzbbz 1",
+      "email": null,
+      "priority": 3,
+      "isActive": true,
+      "createdAt": "2026-08-20T13:49:16.763Z",
+      "updatedAt": "2026-08-22T05:01:14.943Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX2Myc3RlSFF0TWpoaU5qUXlOemsyWmpZNU9UQTVOekF3WVRVeU5URTJNREZqT1RZNE1UZzNNbU00WVdFMU1UQmhORGc0WW1aaF9fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "prefix": "Xkiro",
+        "baseUrl": "https://api.xkiro.com/v1",
+        "nodeName": "Xkiro",
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-22T05:02:44.021Z",
+      "consecutiveUseCount": 1,
+      "modelLock_qwen/qwen-plus-2025-07-28": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "modelLock_qwen/qwen3.7-plus": null,
+      "modelLock_qwen/qwen3.8-max": null,
+      "id": "06e121c5-966c-4cf3-8d23-7d3811459d3f",
+      "provider": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "authType": "apikey",
+      "name": "Tvvvvv 1",
+      "email": null,
+      "priority": 2,
+      "isActive": true,
+      "createdAt": "2026-08-20T13:54:16.428Z",
+      "updatedAt": "2026-08-22T05:02:48.969Z"
+    },
+    {
+      "defaultModel": "deepseek-v4-pro-free",
+      "apiKey": "__B64__X19CNjRfX2EybHlZVjh3T1dSaE1qazVOakU0WWpaak1tVXpOVGhoTm1ZNFl6UmlaVGhqTURsaE9RPT1fX0I2NF9f__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "prefix": "Kira",
+        "apiType": "chat",
+        "baseUrl": "https://kiraai.vn/api/v1",
+        "nodeName": "Kira",
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": ""
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-21T06:59:59.599Z",
+      "consecutiveUseCount": 1,
+      "id": "17c49c3d-dc2c-436e-977e-d381a0d7f8bf",
+      "provider": "openai-compatible-chat-a0b9444d-e47a-48c7-95c4-2e318f011f9f",
+      "authType": "apikey",
+      "name": "Kira",
+      "email": null,
+      "priority": 1,
+      "isActive": false,
+      "createdAt": "2026-08-21T06:58:02.512Z",
+      "updatedAt": "2026-08-21T08:29:16.808Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FVbDZZVk41UWpoR2EzcFBhazQ0TlhocU1sbEJWelZQVjJKemMybERSblJ3VDJGTmRYUkZfX0I2NF9f__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:49.138Z",
+      "lastUsedAt": "2026-08-22T04:56:48.065Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.6-flash": "2026-08-22T04:56:53.138Z",
+      "errorCode": 429,
+      "backoffLevel": 2,
+      "id": "af85b3ad-1db8-4d5f-a148-acf564e7d271",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 4 1",
+      "email": null,
+      "priority": 6,
+      "isActive": true,
+      "createdAt": "2026-08-21T08:30:48.805Z",
+      "updatedAt": "2026-08-22T04:56:49.138Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNXZHVTMWhHTlhscWQwWldUVTFHVG5kR1FXdG9lWFJXTmpCeVEwZGxUWGxFYmxaQ1N6SXRPVEY2VjFFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:51.552Z",
+      "lastUsedAt": "2026-08-22T04:56:50.133Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.6-flash": "2026-08-22T04:56:59.552Z",
+      "errorCode": 429,
+      "backoffLevel": 3,
+      "id": "e1a065fa-5806-4f1f-a6e3-6ff85fc379b6",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 1",
+      "email": null,
+      "priority": 5,
+      "isActive": true,
+      "createdAt": "2026-08-21T08:38:32.749Z",
+      "updatedAt": "2026-08-22T04:56:51.552Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNUTmtTbFJ5UkRCUVFrMTVkVXRFUTNRMmFVdFNiRWR3UWtkWFMxVkhabDloVkVoaFprdFJNSEZsTTBFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-21T14:26:05.365Z",
+      "lastUsedAt": "2026-08-21T14:26:00.929Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.6-flash": "2026-08-21T14:26:07.365Z",
+      "errorCode": 429,
+      "backoffLevel": 1,
+      "id": "255a2207-1685-4b7b-b59e-d31b6ff17353",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 2",
+      "email": null,
+      "priority": 4,
+      "isActive": true,
+      "createdAt": "2026-08-21T08:38:33.926Z",
+      "updatedAt": "2026-08-21T14:26:05.365Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlN6SnZOR2R5VHpKSlJqRkliSFJFTFdKeU1WRXhMVXR6T1hkQ1JVSjVablJIUzFkWmJWbFBRMjFET1VFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:53.682Z",
+      "lastUsedAt": "2026-08-22T04:56:52.606Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.6-flash": "2026-08-22T05:01:53.682Z",
+      "errorCode": 429,
+      "backoffLevel": 9,
+      "id": "220e73c6-160a-41fa-b0da-da274e2f6293",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 2 1",
+      "email": null,
+      "priority": 3,
+      "isActive": true,
+      "createdAt": "2026-08-21T08:38:34.208Z",
+      "updatedAt": "2026-08-22T04:56:53.682Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlMyOUxNbUpwT0ZVMGNFWlFVWFpFY3pOc2FHVjZRMWRaZVZWWWJsRnlTekF4TTJsT1oxSnNSRFJDZVVFPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-22T04:56:50.132Z",
+      "lastUsedAt": "2026-08-22T04:56:49.139Z",
+      "consecutiveUseCount": 1,
+      "modelLock_gemini-3.6-flash": "2026-08-22T04:58:58.132Z",
+      "errorCode": 429,
+      "backoffLevel": 7,
+      "id": "c07b112b-8760-4f86-b048-32d4f91b8b57",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 3 1",
+      "email": null,
+      "priority": 2,
+      "isActive": true,
+      "createdAt": "2026-08-21T08:38:34.512Z",
+      "updatedAt": "2026-08-22T04:56:50.132Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1FWRXVRV0k0VWs0MlNqTlBVVFp6VTBnNE1ub3hkWFJaYUVaaE5sYzFOblZPVWxOUFdGUjNVbUpMTFVwbGFHeFVORGswUjJjPV9fQjY0X18=__B64__",
+      "testStatus": "unavailable",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": ""
+      },
+      "lastError": "[429]: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check",
+      "lastErrorAt": "2026-08-21T14:26:10.998Z",
+      "lastUsedAt": "2026-08-21T14:26:10.455Z",
+      "consecutiveUseCount": 2,
+      "modelLock_gemini-3.6-flash": "2026-08-21T14:31:10.998Z",
+      "errorCode": 429,
+      "backoffLevel": 9,
+      "id": "dc3e6c64-044e-4474-bde7-06f7cad90b71",
+      "provider": "gemini",
+      "authType": "apikey",
+      "name": "Gemini 4 2",
+      "email": null,
+      "priority": 1,
+      "isActive": true,
+      "createdAt": "2026-08-21T08:38:34.821Z",
+      "updatedAt": "2026-08-21T14:26:10.998Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1ozTnJYMWxPU1RGdlpVZFlOemt5VGpKSlVEbFVUbWRYVjBka2VXSXpSbGs0V2xaelFXNHdjSFoxY1VaWlZtZG1UVVJ0YmtwRlZuUT1fX0I2NF9f__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastError": null,
+      "lastErrorAt": null,
+      "lastUsedAt": "2026-08-21T16:33:56.223Z",
+      "consecutiveUseCount": 1,
+      "globalPriority": null,
+      "defaultModel": null,
+      "modelLock_openai/gpt-oss-120b": null,
+      "errorCode": null,
+      "backoffLevel": 0,
+      "id": "178044a0-67f6-40ab-a8f5-88e99b781fe7",
+      "provider": "groq",
+      "authType": "apikey",
+      "name": "Groq",
+      "email": null,
+      "priority": 3,
+      "isActive": true,
+      "createdAt": "2026-08-21T15:09:27.527Z",
+      "updatedAt": "2026-08-21T16:33:58.037Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1ozTnJYeloxU21WME9HcDBWbGd4VW1KWVZsRm9WMFJRVjBka2VXSXpSbGxvYlROVFV6QTNZV3BEU2poWFIwTTNSRUZwU0V0eWJHMD1fX0I2NF9f__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastUsedAt": "2026-08-21T16:33:53.904Z",
+      "consecutiveUseCount": 1,
+      "modelLock_openai/gpt-oss-120b": null,
+      "lastError": null,
+      "errorCode": null,
+      "lastErrorAt": null,
+      "backoffLevel": 0,
+      "id": "d4dc1e61-0419-4078-979f-5118234e1791",
+      "provider": "groq",
+      "authType": "apikey",
+      "name": "Groq 1",
+      "email": null,
+      "priority": 2,
+      "isActive": true,
+      "createdAt": "2026-08-21T15:50:18.257Z",
+      "updatedAt": "2026-08-21T16:33:55.229Z"
+    },
+    {
+      "apiKey": "__B64__X19CNjRfX1ozTnJYM053UzNONFkyazNhekowVFVKWmNHTlpOVXQyVjBka2VXSXpSbGx2Wld4TVNIQlhSSGw2TkdONVkwWXhXR1ZIYkVrNWVqQT1fX0I2NF9f__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastUsedAt": "2026-08-21T16:33:51.852Z",
+      "consecutiveUseCount": 1,
+      "modelLock_openai/gpt-oss-120b": null,
+      "lastError": null,
+      "errorCode": null,
+      "lastErrorAt": null,
+      "backoffLevel": 0,
+      "id": "6e96f06c-65b1-4220-a1b9-dede59c797bd",
+      "provider": "groq",
+      "authType": "apikey",
+      "name": "Groq 3",
+      "email": null,
+      "priority": 1,
+      "isActive": true,
+      "createdAt": "2026-08-21T15:55:40.502Z",
+      "updatedAt": "2026-08-21T16:33:53.715Z"
+    },
+    {
+      "defaultModel": "Vvvbb",
+      "apiKey": "__B64__X19CNjRfX2Myc3RlSFF0TldVeVlUSXlZMkZpTVRSbU1HRXhORFkxT1dNMU1qQTRNMkZsWldReFpqQmhNVFkyWXpoaFpUTTROMlExWW1KbF9fQjY0X18=__B64__",
+      "testStatus": "active",
+      "providerSpecificData": {
+        "prefix": "Xkiro",
+        "baseUrl": "https://api.xkiro.com/v1",
+        "nodeName": "Xkiro",
+        "connectionProxyEnabled": false,
+        "connectionProxyUrl": "",
+        "connectionNoProxy": "",
+        "proxyPoolId": "vn-auto-rotation-pool"
+      },
+      "lastUsedAt": "2026-08-22T05:02:28.841Z",
+      "consecutiveUseCount": 1,
+      "id": "84d2c4c5-f143-4926-89c5-40112ebbfe55",
+      "provider": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "authType": "apikey",
+      "name": "Xkiro 19",
+      "email": null,
+      "priority": 1,
+      "isActive": true,
+      "createdAt": "2026-08-21T15:57:08.979Z",
+      "updatedAt": "2026-08-22T05:02:28.841Z"
+    }
+  ],
+  "providerNodes": [
+    {
+      "prefix": "Xkiro",
+      "baseUrl": "https://api.xkiro.com/v1",
+      "id": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "type": "anthropic-compatible",
+      "name": "Xkiro",
+      "createdAt": "2026-08-19T16:44:07.341Z",
+      "updatedAt": "2026-08-19T16:44:07.341Z"
+    },
+    {
+      "prefix": "Kira",
+      "apiType": "chat",
+      "baseUrl": "https://kiraai.vn/api/v1",
+      "id": "openai-compatible-chat-a0b9444d-e47a-48c7-95c4-2e318f011f9f",
+      "type": "openai-compatible",
+      "name": "Kira",
+      "createdAt": "2026-08-21T06:56:43.832Z",
+      "updatedAt": "2026-08-21T06:56:43.832Z"
+    }
+  ],
+  "proxyPools": [
+    {
+      "id": "vn-auto-rotation-pool",
+      "name": "VN Auto-Rotation",
+      "proxies": [
+        "http://115.231.181.40:8128",
+        "http://58.254.153.146:17981",
+        "http://123.57.213.24:3539",
+        "http://219.142.66.245:9090",
+        "http://120.232.115.170:17981"
+      ],
+      "isActive": true,
+      "strategy": "round-robin",
+      "createdAt": "2026-08-22T07:00:00.000Z",
+      "updatedAt": "2026-08-22T07:00:00.000Z"
+    }
+  ],
+  "apiKeys": [
+    {
+      "id": "cb710c68-14a1-48a7-8c26-57e474f2f22d",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMHljMnR2WkRJdE4yUXhORE5tTWprPV9fQjY0X18=__B64__",
+      "name": "Default Key",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-19T14:11:40.379Z"
+    },
+    {
+      "id": "a05610f9-e876-4e0b-8fc4-ff2fca778f27",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMDVaSEUxTjJRdFl6azFNR0V4TnpZPV9fQjY0X18=__B64__",
+      "name": "Gvv",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-19T14:11:53.218Z"
+    },
+    {
+      "id": "03a39461-6715-491a-94a3-088739a7ba6e",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMTNkRGt4YzI4dFpqSTBaakl5TXpFPV9fQjY0X18=__B64__",
+      "name": "Yhh",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-19T16:40:19.952Z"
+    },
+    {
+      "id": "5d2132de-9db3-4136-91b3-b7ee53673d2e",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMDFlVGx0T0dRdE9XTmhNakUxWVdFPV9fQjY0X18=__B64__",
+      "name": "Vvvv",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-20T04:28:42.765Z"
+    },
+    {
+      "id": "796166b0-1950-4b62-b20e-a441aea3aec7",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMXRkbU5rWnpNdFpUWm1ZV0U0WmpnPV9fQjY0X18=__B64__",
+      "name": "Vvvvvvbb",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-20T09:49:15.895Z"
+    },
+    {
+      "id": "265cc588-eea6-4ea6-87f6-5855c341db77",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMTVOWHA0ZERndFpURTVabVU1TUdNPV9fQjY0X18=__B64__",
+      "name": "Bbbbbb",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-20T14:08:10.227Z"
+    },
+    {
+      "id": "b9bc9f9d-f19f-4283-9efb-93673bf81c0b",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMXNZMk5sWVRndFlqazJabUZoTmpNPV9fQjY0X18=__B64__",
+      "name": "Bot",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-20T14:38:46.109Z"
+    },
+    {
+      "id": "56856514-e205-42ab-ae05-86b93fb28441",
+      "key": "__B64__X19CNjRfX2Myc3RaV1JtTVRKaU16VmxNbUZsTldVeU5DMWlOWGs0WldjdE5ERTNOVFE1TldFPV9fQjY0X18=__B64__",
+      "name": "Bot",
+      "machineId": "edf12b35e2ae5e24",
+      "isActive": true,
+      "createdAt": "2026-08-21T14:55:54.326Z"
+    }
+  ],
+  "combos": [],
+  "modelAliases": {},
+  "customModels": [
+    {
+      "providerAlias": "openai-compatible-chat-d0152569-b3ca-4179-907f-7754cdb0b43a",
+      "id": "deepseek/deepseek-v4-pro",
+      "type": "llm",
+      "name": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "providerAlias": "openrouter",
+      "id": "z-ai/glm-5.2:free",
+      "type": "llm",
+      "name": "z-ai/glm-5.2:free"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "xiaomi/mimo-v2.5-pro",
+      "type": "llm",
+      "name": "xiaomi/mimo-v2.5-pro"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3-coder-plus",
+      "type": "llm",
+      "name": "qwen/qwen3-coder-plus"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-fable-5",
+      "type": "llm",
+      "name": "anthropic/claude-fable-5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-haiku-4.5",
+      "type": "llm",
+      "name": "anthropic/claude-haiku-4.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-opus-4.6",
+      "type": "llm",
+      "name": "anthropic/claude-opus-4.6"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-opus-4.7",
+      "type": "llm",
+      "name": "anthropic/claude-opus-4.7"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-opus-4.8",
+      "type": "llm",
+      "name": "anthropic/claude-opus-4.8"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-opus-5",
+      "type": "llm",
+      "name": "anthropic/claude-opus-5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-sonnet-4.6",
+      "type": "llm",
+      "name": "anthropic/claude-sonnet-4.6"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "anthropic/claude-sonnet-5",
+      "type": "llm",
+      "name": "anthropic/claude-sonnet-5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "openai/gpt-5.4",
+      "type": "llm",
+      "name": "openai/gpt-5.4"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "openai/gpt-5.4-mini",
+      "type": "llm",
+      "name": "openai/gpt-5.4-mini"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "openai/gpt-5.5",
+      "type": "llm",
+      "name": "openai/gpt-5.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "openai/gpt-5.6-luna",
+      "type": "llm",
+      "name": "openai/gpt-5.6-luna"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "openai/gpt-5.6-sol",
+      "type": "llm",
+      "name": "openai/gpt-5.6-sol"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "openai/gpt-5.6-terra",
+      "type": "llm",
+      "name": "openai/gpt-5.6-terra"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-2.5-flash",
+      "type": "llm",
+      "name": "google/gemini-2.5-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-2.5-pro",
+      "type": "llm",
+      "name": "google/gemini-2.5-pro"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-3.1-pro",
+      "type": "llm",
+      "name": "google/gemini-3.1-pro"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-3.5-flash",
+      "type": "llm",
+      "name": "google/gemini-3.5-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-3.6-flash",
+      "type": "llm",
+      "name": "google/gemini-3.6-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-3.7-flash",
+      "type": "llm",
+      "name": "google/gemini-3.7-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "google/gemini-3-flash",
+      "type": "llm",
+      "name": "google/gemini-3-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "moonshotai/kimi-k2.5",
+      "type": "llm",
+      "name": "moonshotai/kimi-k2.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "moonshotai/kimi-k2.6",
+      "type": "llm",
+      "name": "moonshotai/kimi-k2.6"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "moonshotai/kimi-k2.7-code",
+      "type": "llm",
+      "name": "moonshotai/kimi-k2.7-code"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "moonshotai/kimi-k3",
+      "type": "llm",
+      "name": "moonshotai/kimi-k3"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "x-ai/grok-4.5",
+      "type": "llm",
+      "name": "x-ai/grok-4.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "x-ai/grok-4.6",
+      "type": "llm",
+      "name": "x-ai/grok-4.6"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "x-ai/grok-build-0.1",
+      "type": "llm",
+      "name": "x-ai/grok-build-0.1"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "deepseek/deepseek-chat-v3.1",
+      "type": "llm",
+      "name": "deepseek/deepseek-chat-v3.1"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "deepseek/deepseek-v3.2",
+      "type": "llm",
+      "name": "deepseek/deepseek-v3.2"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "deepseek/deepseek-v4-flash",
+      "type": "llm",
+      "name": "deepseek/deepseek-v4-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "deepseek/deepseek-v4-pro",
+      "type": "llm",
+      "name": "deepseek/deepseek-v4-pro"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "xiaomi/mimo-v2.5",
+      "type": "llm",
+      "name": "xiaomi/mimo-v2.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2",
+      "type": "llm",
+      "name": "minimax/minimax-m2"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2.1",
+      "type": "llm",
+      "name": "minimax/minimax-m2.1"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2.1-highspeed",
+      "type": "llm",
+      "name": "minimax/minimax-m2.1-highspeed"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2.5",
+      "type": "llm",
+      "name": "minimax/minimax-m2.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2.5-highspeed",
+      "type": "llm",
+      "name": "minimax/minimax-m2.5-highspeed"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2.7",
+      "type": "llm",
+      "name": "minimax/minimax-m2.7"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m2.7-highspeed",
+      "type": "llm",
+      "name": "minimax/minimax-m2.7-highspeed"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "minimax/minimax-m3",
+      "type": "llm",
+      "name": "minimax/minimax-m3"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/codestral-2508",
+      "type": "llm",
+      "name": "mistralai/codestral-2508"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/devstral-medium",
+      "type": "llm",
+      "name": "mistralai/devstral-medium"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/ministral-14b",
+      "type": "llm",
+      "name": "mistralai/ministral-14b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/ministral-3b",
+      "type": "llm",
+      "name": "mistralai/ministral-3b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/ministral-8b",
+      "type": "llm",
+      "name": "mistralai/ministral-8b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/mistral-large-2512",
+      "type": "llm",
+      "name": "mistralai/mistral-large-2512"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/mistral-medium-3.5",
+      "type": "llm",
+      "name": "mistralai/mistral-medium-3.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "mistralai/mistral-small-2603",
+      "type": "llm",
+      "name": "mistralai/mistral-small-2603"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "nvidia/llama-3.3-nemotron-super-49b",
+      "type": "llm",
+      "name": "nvidia/llama-3.3-nemotron-super-49b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "nvidia/nemotron-3-nano",
+      "type": "llm",
+      "name": "nvidia/nemotron-3-nano"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "nvidia/nemotron-3-nano-omni",
+      "type": "llm",
+      "name": "nvidia/nemotron-3-nano-omni"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "nvidia/nemotron-3-super",
+      "type": "llm",
+      "name": "nvidia/nemotron-3-super"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "nvidia/nemotron-3-ultra",
+      "type": "llm",
+      "name": "nvidia/nemotron-3-ultra"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-4.5",
+      "type": "llm",
+      "name": "z-ai/glm-4.5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-4.5-air",
+      "type": "llm",
+      "name": "z-ai/glm-4.5-air"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-4.6",
+      "type": "llm",
+      "name": "z-ai/glm-4.6"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-4.7",
+      "type": "llm",
+      "name": "z-ai/glm-4.7"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-5",
+      "type": "llm",
+      "name": "z-ai/glm-5"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-5.1",
+      "type": "llm",
+      "name": "z-ai/glm-5.1"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-5.2",
+      "type": "llm",
+      "name": "z-ai/glm-5.2"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-5.3",
+      "type": "llm",
+      "name": "z-ai/glm-5.3"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "z-ai/glm-5-turbo",
+      "type": "llm",
+      "name": "z-ai/glm-5-turbo"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "type": "llm",
+      "name": "deepseek/deepseek-v4-flash-0731"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "type": "llm",
+      "name": "deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.5-397b-a17b",
+      "type": "llm",
+      "name": "qwen/qwen3.5-397b-a17b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.5-flash",
+      "type": "llm",
+      "name": "qwen/qwen3.5-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.5-omni-flash",
+      "type": "llm",
+      "name": "qwen/qwen3.5-omni-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.5-omni-plus",
+      "type": "llm",
+      "name": "qwen/qwen3.5-omni-plus"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.5-plus",
+      "type": "llm",
+      "name": "qwen/qwen3.5-plus"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.6-27b",
+      "type": "llm",
+      "name": "qwen/qwen3.6-27b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.6-35b-a3b",
+      "type": "llm",
+      "name": "qwen/qwen3.6-35b-a3b"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.6-max-preview",
+      "type": "llm",
+      "name": "qwen/qwen3.6-max-preview"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.6-plus",
+      "type": "llm",
+      "name": "qwen/qwen3.6-plus"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.7-max",
+      "type": "llm",
+      "name": "qwen/qwen3.7-max"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.7-plus",
+      "type": "llm",
+      "name": "qwen/qwen3.7-plus"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3.8-max",
+      "type": "llm",
+      "name": "qwen/qwen3.8-max"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3-max",
+      "type": "llm",
+      "name": "qwen/qwen3-max"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3-omni-flash",
+      "type": "llm",
+      "name": "qwen/qwen3-omni-flash"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen3-vl-plus",
+      "type": "llm",
+      "name": "qwen/qwen3-vl-plus"
+    },
+    {
+      "providerAlias": "anthropic-compatible-5a9ccfe2-36e4-4598-9d46-6945d2949414",
+      "id": "qwen/qwen-plus-2025-07-28",
+      "type": "llm",
+      "name": "qwen/qwen-plus-2025-07-28"
+    }
+  ],
+  "mitmAlias": {},
+  "pricing": {}
+}
