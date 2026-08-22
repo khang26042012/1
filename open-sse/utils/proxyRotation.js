@@ -3,7 +3,7 @@
  * 
  * Auto-rotates through Vietnam proxies from data/vn-proxies.json.
  * Tracks failures per proxy and removes dead ones automatically.
- * Periodically refreshes proxy list via fetch-vn-proxies.py script.
+ * Periodically refreshes proxy list via auto-proxy-vn.py script.
  * 
  * Integration: Import getActiveProxy() in proxyFetch.js to get current proxy URL.
  */
@@ -161,7 +161,7 @@ class ProxyRotationManager {
     if (this.refreshing) return;
     this.refreshing = true;
 
-    const scriptPath = join(__dirname, "../../scripts/fetch-vn-proxies.py");
+    const scriptPath = join(__dirname, "../../scripts/auto-proxy-vn.py");
     dbg("PROXY", "Triggering proxy list refresh...");
 
     execFile("python3", [scriptPath], { timeout: 120000 }, (err, stdout, stderr) => {
