@@ -232,4 +232,3 @@ export function forceProxyRefresh() {
 
 export default manager;
 
-</ARG>
