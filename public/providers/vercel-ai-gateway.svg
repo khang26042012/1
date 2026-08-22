@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Vercel AI Gateway — triangle gate with flow lines -->
+  <rect width="64" height="64" rx="14" fill="#111827"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  <path d="M32 12 L54 50 L10 50 Z" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M32 24 L43 43 L21 43 Z" fill="#FFFFFF" opacity="0.12"/>
+  <path d="M32 27 V40" stroke="#60A5FA" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="32" cy="26" r="3" fill="#60A5FA"/>
+  <circle cx="32" cy="41.5" r="2.4" fill="#60A5FA"/>
+  <path d="M6 31 H10 M54 31 H58" stroke="#60A5FA" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="6" cy="31" r="2" fill="#60A5FA"/>
+  <circle cx="58" cy="31" r="2" fill="#60A5FA"/>
+</svg>

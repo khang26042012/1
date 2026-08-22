@@ -1,0 +1,73 @@
+name: Publish CLI to npm
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (pack only, skip actual publish)"
+        required: false
+        default: "true"
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Quality gate
+    uses: ./.github/workflows/quality-gate.yml
+
+  publish:
+    name: Build & Publish CLI
+    needs: quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: "npm"
+
+      - name: Install app dependencies
+        run: npm ci
+
+      - name: Build Next.js standalone (traced into CLI bundle)
+        run: npm run build
+        env:
+          NEXT_TRACING_ROOT_MODE: workspace
+
+      - name: Build CLI package (pack into root .tgz)
+        run: npm run cli:pack
+        env:
+          NEXT_TRACING_ROOT_MODE: workspace
+
+      - name: Inspect tarball
+        run: |
+          echo "## CLI tarball" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          TARFILE=$(ls -1 *.tgz | head -1)
+          echo "File: \`$TARFILE\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          tar -tzf "$TARFILE" | head -40 >> $GITHUB_STEP_SUMMARY
+          echo '...' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Publish to npm (from tarball)
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: npm publish *.tgz --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish (dry run)
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        run: npm publish *.tgz --dry-run --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

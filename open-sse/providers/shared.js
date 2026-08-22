@@ -1,0 +1,81 @@
+import { platform, arch } from "os";
+
+// === OS/Arch helpers (Stainless fingerprint) ===
+export function mapStainlessOs() {
+  switch (platform()) {
+    case "darwin": return "MacOS";
+    case "win32": return "Windows";
+    case "linux": return "Linux";
+    case "freebsd": return "FreeBSD";
+    default: return `Other::${platform()}`;
+  }
+}
+
+export function mapStainlessArch() {
+  switch (arch()) {
+    case "x64": return "x64";
+    case "arm64": return "arm64";
+    case "ia32": return "x86";
+    default: return `other::${arch()}`;
+  }
+}
+
+// Anthropic API version (single source — reused across claude-format providers/executors)
+export const ANTHROPIC_API_VERSION = "2023-06-01";
+
+// Shared Claude-compatible API headers (reused across claude-format providers)
+export const CLAUDE_API_HEADERS = {
+  "Anthropic-Version": ANTHROPIC_API_VERSION,
+  "Anthropic-Beta": "claude-code-20250219,interleaved-thinking-2025-05-14"
+};
+
+// Full Claude CLI fingerprint — required by providers that gate on client identity (e.g. agentrouter)
+// Updated to match Claude Code 2.1.220 + Anthropic SDK 0.115.0 (July 2026).
+export const CLAUDE_CLI_SPOOF_HEADERS = {
+  "Anthropic-Version": ANTHROPIC_API_VERSION,
+  "Anthropic-Beta": "claude-code-20250219,oauth-2025-04-20,interleaved-thinking-2025-05-14,context-management-2025-06-27,prompt-caching-scope-2026-01-05,advanced-tool-use-2025-11-20,effort-2025-11-24,structured-outputs-2025-12-15,fast-mode-2026-02-01,redact-thinking-2026-02-12,token-efficient-tools-2026-03-28,fine-grained-tool-streaming-2025-05-14",
+  "Anthropic-Dangerous-Direct-Browser-Access": "true",
+  "User-Agent": "claude-cli/2.1.220 (external, sdk-cli)",
+  "X-App": "cli",
+  "X-Stainless-Helper-Method": "stream",
+  "X-Stainless-Retry-Count": "0",
+  "X-Stainless-Runtime-Version": process.version,
+  "X-Stainless-Package-Version": "0.115.0",
+  "X-Stainless-Runtime": "node",
+  "X-Stainless-Lang": "js",
+  "X-Stainless-Arch": mapStainlessArch(),
+  "X-Stainless-Os": mapStainlessOs(),
+  "X-Stainless-Timeout": "600"
+};
+
+// Shared baseUrls
+export const KIMI_CODING_BASE_URL = "https://api.kimi.com/coding/v1/messages";
+
+// Default base for dynamic compat providers (openai-compatible-* / anthropic-compatible-*) when user gives no baseUrl
+export const OPENAI_COMPAT_BASE = "https://api.openai.com/v1";
+export const ANTHROPIC_COMPAT_BASE = "https://api.anthropic.com/v1";
+
+// Env-override helper (Scenario A): read an optional env var, falling back to the
+// packaged default. Defaults are intentionally UNCHANGED so existing OAuth refresh
+// tokens (bound to the packaged client identity) keep working after upgrade.
+// Setting a var lets a self-hoster use their OWN OAuth app — but it changes the
+// client identity, so ONLY that instance's own connections must be re-linked.
+const fromEnv = (key, fallback) => (typeof process !== "undefined" && process.env?.[key]) || fallback;
+
+// Antigravity OAuth client credentials (public CLI client — shared by registry + src/lib/oauth)
+export const ANTIGRAVITY_OAUTH_CLIENT = {
+  clientId: fromEnv("ANTIGRAVITY_OAUTH_CLIENT_ID", "REDACTED_CLIENT_ID_1"),
+  clientSecret: fromEnv("ANTIGRAVITY_OAUTH_CLIENT_SECRET", "REDACTED_SECRET_1")
+};
+
+// Gemini (Google) OAuth client credentials (public CLI client — shared by gemini, gemini-cli, src/lib/oauth)
+export const GOOGLE_OAUTH_CLIENT = {
+  clientId: fromEnv("GEMINI_OAUTH_CLIENT_ID", "REDACTED_CLIENT_ID_2"),
+  clientSecret: fromEnv("GEMINI_OAUTH_CLIENT_SECRET", "REDACTED_SECRET_2")
+};
+
+// iFlow OAuth client credentials (public CLI client)
+export const IFLOW_OAUTH_CLIENT = {
+  clientId: fromEnv("IFLOW_OAUTH_CLIENT_ID", "10009311001"),
+  clientSecret: fromEnv("IFLOW_OAUTH_CLIENT_SECRET", "4Z3YjXycVsQvyGF1etiNlIBB4RsqSDtW")
+};

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mrg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <!-- Marathon — stopwatch with progress arc (delayed inference) -->
+  <rect width="64" height="64" rx="14" fill="#082434"/>
+  <rect width="64" height="64" rx="14" fill="url(#mrg)" opacity="0.2"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#0EA5E9" stroke-opacity="0.4"/>
+  <rect x="28" y="9.5" width="8" height="4.5" rx="2" fill="#38BDF8"/>
+  <circle cx="32" cy="34" r="17" fill="none" stroke="url(#mrg)" stroke-width="4.5"/>
+  <path d="M32 34 A17 17 0 0 1 32 17" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M32 34 L40 26" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="32" cy="34" r="3" fill="#FFFFFF"/>
+  <path d="M13.5 22 l-3.5 3.5 M50.5 22 l3.5 3.5" stroke="#38BDF8" stroke-width="3.4" stroke-linecap="round" opacity="0.85"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="grg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5AC1F8"/>
+      <stop offset="1" stop-color="#1DA1F2"/>
+    </linearGradient>
+  </defs>
+  <!-- Grok Web — orbital slash monogram -->
+  <rect width="64" height="64" rx="14" fill="#0B0E11"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#1DA1F2" stroke-opacity="0.35"/>
+  <ellipse cx="32" cy="32" rx="21" ry="9" transform="rotate(-24 32 32)" fill="none" stroke="url(#grg)" stroke-width="4.5"/>
+  <path d="M42 16 L24 48" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="47.5" cy="23.5" r="3.5" fill="#5AC1F8"/>
+</svg>

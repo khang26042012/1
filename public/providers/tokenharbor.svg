@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="th-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#th-grad)"/>
+  <!-- Stylized TH anchor: T + H monogram -->
+  <path d="M14 18 H34 V23 H28 V46 H20 V23 H14 Z" fill="#FFFFFF"/>
+  <path d="M40 18 V23 H42 V46 H50 V23 H52 V18 H40 Z" fill="#FFFFFF"/>
+</svg>

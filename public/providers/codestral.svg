@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="csg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB25E"/>
+      <stop offset="1" stop-color="#FF7000"/>
+    </linearGradient>
+  </defs>
+  <!-- Codestral — code brackets over code lines (code model) -->
+  <rect width="64" height="64" rx="14" fill="#241408"/>
+  <rect width="64" height="64" rx="14" fill="url(#csg)" opacity="0.2"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#FF7000" stroke-opacity="0.4"/>
+  <path d="M24 20 L13 32 L24 44" fill="none" stroke="url(#csg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 20 L51 32 L40 44" fill="none" stroke="url(#csg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 17 L29 47" stroke="#FFB25E" stroke-width="5" stroke-linecap="round"/>
+  <rect x="18" y="50.5" width="28" height="3.4" rx="1.7" fill="#FF7000" opacity="0.8"/>
+</svg>

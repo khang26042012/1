@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="dbg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <!-- Databricks — stacked data bricks motif -->
+  <rect width="64" height="64" rx="14" fill="#231208"/>
+  <rect width="64" height="64" rx="14" fill="url(#dbg)" opacity="0.2"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#F97316" stroke-opacity="0.4"/>
+  <g fill="url(#dbg)">
+    <rect x="24" y="14" width="16" height="7" rx="2"/>
+    <rect x="15" y="24" width="16" height="7" rx="2"/>
+    <rect x="33" y="24" width="16" height="7" rx="2"/>
+    <rect x="15" y="34" width="16" height="7" rx="2" opacity="0.85"/>
+    <rect x="33" y="34" width="16" height="7" rx="2" opacity="0.85"/>
+    <rect x="24" y="44" width="16" height="7" rx="2" opacity="0.7"/>
+  </g>
+  <circle cx="32" cy="17.5" r="3" fill="#FFFFFF"/>
+</svg>
