@@ -1,0 +1,39 @@
+{
+  "updated_at": "2026-08-22T07:26:10Z",
+  "total_fetched": 377,
+  "vn_candidates": 88,
+  "tested": 88,
+  "alive_count": 5,
+  "proxies": [
+    {
+      "host": "115.231.181.40",
+      "port": 8128,
+      "latency_ms": 1030,
+      "alive": true
+    },
+    {
+      "host": "58.254.153.146",
+      "port": 17981,
+      "latency_ms": 1401,
+      "alive": true
+    },
+    {
+      "host": "123.57.213.24",
+      "port": 3539,
+      "latency_ms": 1881,
+      "alive": true
+    },
+    {
+      "host": "219.142.66.245",
+      "port": 9090,
+      "latency_ms": 2806,
+      "alive": true
+    },
+    {
+      "host": "120.232.115.170",
+      "port": 17981,
+      "latency_ms": 2831,
+      "alive": true
+    }
+  ]
+}
