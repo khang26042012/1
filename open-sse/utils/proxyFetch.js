@@ -1,6 +1,7 @@
 import { Readable } from "stream";
 import { MEMORY_CONFIG } from "../config/runtimeConfig.js";
 import { dbg } from "./debugLog.js";
+import { getActiveProxy, reportProxySuccess, reportProxyFailure } from "./proxyRotation.js";
 
 const originalFetch = globalThis.fetch;
 const proxyDispatchers = new Map();
@@ -308,7 +309,9 @@ export async function proxyAwareFetch(url, options = {}, proxyOptions = null) {
 
   const connectionProxyUrl = resolveConnectionProxyUrl(targetUrl, proxyOptions);
   const envProxyUrl = connectionProxyUrl ? null : normalizeProxyUrl(getEnvProxyUrl(targetUrl));
-  const proxyUrl = connectionProxyUrl || envProxyUrl;
+  // Auto-rotate VN proxy if no explicit proxy is set
+  const rotationProxyUrl = (!connectionProxyUrl && !envProxyUrl) ? getActiveProxy() : null;
+  const proxyUrl = connectionProxyUrl || envProxyUrl || rotationProxyUrl;
 
   // MITM DNS bypass: for known MITM-intercepted hosts, resolve real IP to avoid DNS spoof
   if (shouldBypassMitmDns(targetUrl)) {
@@ -337,12 +340,15 @@ export async function proxyAwareFetch(url, options = {}, proxyOptions = null) {
   if (proxyUrl) {
     try {
       const dispatcher = await getDispatcher(proxyUrl);
-      return await originalFetch(url, { ...options, dispatcher });
+      const response = await originalFetch(url, { ...options, dispatcher });
+      if (rotationProxyUrl) reportProxySuccess(rotationProxyUrl);
+      return response;
     } catch (proxyError) {
       // If strictProxy is enabled, fail hard instead of falling back to direct
       if (proxyOptions?.strictProxy === true) {
         throw new Error(`[ProxyFetch] Proxy required but failed (strictProxy=true): ${proxyError.message}`);
       }
+      if (rotationProxyUrl) reportProxyFailure(rotationProxyUrl, proxyError.message);
       console.warn(`[ProxyFetch] Proxy failed, falling back to direct: ${proxyError.message}`);
       return originalFetch(url, options);
     }
