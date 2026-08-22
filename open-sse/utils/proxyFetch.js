@@ -227,7 +227,15 @@ async function getDispatcher(proxyUrl) {
       proxyDispatchers.delete(proxyDispatchers.keys().next().value);
     }
     const { ProxyAgent } = await import("undici");
-    proxyDispatchers.set(normalized, new ProxyAgent({ uri: normalized }));
+    // Increased timeout for slow VN proxies (Railway EU/US → VN)
+    proxyDispatchers.set(normalized, new ProxyAgent({
+      uri: normalized,
+      connectTimeout: 60000,   // 60s connect timeout (was default ~30s)
+      bodyTimeout: 120000,     // 120s body read timeout
+      headersTimeout: 60000,   // 60s headers timeout
+      keepAliveTimeout: 30000, // 30s keep-alive
+      pipelining: 1,           // Disable pipelining for proxy stability
+    }));
   }
 
   return proxyDispatchers.get(normalized);
@@ -312,6 +320,9 @@ export async function proxyAwareFetch(url, options = {}, proxyOptions = null) {
   // Auto-rotate VN proxy if no explicit proxy is set
   const rotationProxyUrl = (!connectionProxyUrl && !envProxyUrl) ? getActiveProxy() : null;
   const proxyUrl = connectionProxyUrl || envProxyUrl || rotationProxyUrl;
+  if (rotationProxyUrl) {
+    dbg("PROXY", `Using rotation proxy: ${rotationProxyUrl} for ${targetUrl}`);
+  }
 
   // MITM DNS bypass: for known MITM-intercepted hosts, resolve real IP to avoid DNS spoof
   if (shouldBypassMitmDns(targetUrl)) {
@@ -349,7 +360,7 @@ export async function proxyAwareFetch(url, options = {}, proxyOptions = null) {
         throw new Error(`[ProxyFetch] Proxy required but failed (strictProxy=true): ${proxyError.message}`);
       }
       if (rotationProxyUrl) reportProxyFailure(rotationProxyUrl, proxyError.message);
-      console.warn(`[ProxyFetch] Proxy failed, falling back to direct: ${proxyError.message}`);
+      console.warn(`[ProxyFetch] Rotation proxy ${rotationProxyUrl} failed (${proxyError.message}), falling back to direct`);
       return originalFetch(url, options);
     }
   }
