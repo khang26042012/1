@@ -24,17 +24,13 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
-      - name: Restore dependencies
-        run: |
-          cd source
-          dotnet restore VoiceCraft.sln
-
       - name: Build Server (Linux x64)
         run: |
-          cd source
-          dotnet publish VoiceCraft.Server -c Release -r linux-x64 --self-contained true -o ../build/server
-          ls -la ../build/server
-          file ../build/server/VoiceCraft.Server
+          cd source/VoiceCraft.Server
+          dotnet restore
+          dotnet publish -c Release -r linux-x64 --self-contained true -o ../../build/server
+          ls -la ../../build/server
+          file ../../build/server/VoiceCraft.Server
 
       - name: Pack artifacts
         run: |
