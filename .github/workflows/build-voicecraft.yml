@@ -1,48 +1,62 @@
-name: Build VoiceCraft Server
+name: Build VoiceCraft Docker Image
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'VoiceCraft version tag (e.g. v1.7.1)'
+        description: 'VoiceCraft version tag'
         required: true
         default: 'v1.7.1'
+      push:
+        description: 'Push to registry (true/false)'
+        required: false
+        default: 'true'
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
-      - name: Checkout source
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        if: github.event.inputs.push == 'true'
+        uses: docker/login-action@v3
         with:
-          repository: 'AvionBlock/VoiceCraft'
-          ref: ${{ inputs.version }}
-          path: source
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
+      - name: Build and push
+        if: github.event.inputs.push == 'true'
+        uses: docker/build-push-action@v5
         with:
-          dotnet-version: '9.0.x'
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ghcr.io/khang26042012/voicecraft-server:${{ inputs.version }}
+            ghcr.io/khang26042012/voicecraft-server:latest
+          build-args: |
+            VERSION=${{ inputs.version }}
+          platforms: linux/amd64
 
-      - name: Build Server (Linux x64)
+      - name: Build only (no push)
+        if: github.event.inputs.push != 'true'
         run: |
-          cd source/VoiceCraft.Server
-          dotnet restore
-          dotnet publish -c Release -r linux-x64 --self-contained true -o ../../build/server
-          ls -la ../../build/server
-          file ../../build/server/VoiceCraft.Server
+          docker build -t voicecraft-server:${{ inputs.version }} --build-arg VERSION=${{ inputs.version }} .
+          docker save voicecraft-server:${{ inputs.version }} | gzip > voicecraft-image.tar.gz
+          ls -la voicecraft-image.tar.gz
 
-      - name: Pack artifacts
-        run: |
-          cd build/server
-          zip -r ../../voicecraft-server-built.zip .
-          cd ../..
-          ls -la voicecraft-server-built.zip
-          file voicecraft-server-built.zip
-
-      - name: Upload artifact
+      - name: Upload image artifact
         uses: actions/upload-artifact@v4
         with:
-          name: voicecraft-server-${{ inputs.version }}
-          path: voicecraft-server-built.zip
-          retention-days: 7
+          name: voicecraft-image-${{ inputs.version }}
+          path: voicecraft-image.tar.gz
+          retention-days: 3
