@@ -1,0 +1,20 @@
+name: Download VoiceCraft
+on: workflow_dispatch
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download VoiceCraft binary
+        run: |
+          mkdir -p artifact
+          cd artifact
+          curl -L -o voicecraft-server.zip \
+            "https://github.com/AvionBlock/VoiceCraft/releases/download/v1.7.1/VoiceCraft.Server.Linux.x64.zip"
+          ls -la
+          file voicecraft-server.zip
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: voicecraft-server
+          path: artifact/voicecraft-server.zip
+          retention-days: 1
