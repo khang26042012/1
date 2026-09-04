@@ -1,0 +1,52 @@
+name: Build VoiceCraft Server
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'VoiceCraft version tag (e.g. v1.7.1)'
+        required: true
+        default: 'v1.7.1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          repository: 'AvionBlock/VoiceCraft'
+          ref: ${{ inputs.version }}
+          path: source
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: |
+          cd source
+          dotnet restore VoiceCraft.sln
+
+      - name: Build Server (Linux x64)
+        run: |
+          cd source
+          dotnet publish VoiceCraft.Server -c Release -r linux-x64 --self-contained true -o ../build/server
+          ls -la ../build/server
+          file ../build/server/VoiceCraft.Server
+
+      - name: Pack artifacts
+        run: |
+          cd build/server
+          zip -r ../../voicecraft-server-built.zip .
+          cd ../..
+          ls -la voicecraft-server-built.zip
+          file voicecraft-server-built.zip
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: voicecraft-server-${{ inputs.version }}
+          path: voicecraft-server-built.zip
+          retention-days: 7
