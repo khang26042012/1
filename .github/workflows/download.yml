@@ -9,7 +9,7 @@ jobs:
           mkdir -p artifact
           cd artifact
           curl -L -o voicecraft-server.zip \
-            "https://github.com/AvionBlock/VoiceCraft/releases/download/v1.7.1/VoiceCraft.Server.Linux.x64.zip"
+            "https://github.com/AvionBlock/VoiceCraft/releases/download/v1.6.1/VoiceCraft.Server.Linux.x64.zip"
           ls -la
           file voicecraft-server.zip
       - name: Upload artifact
