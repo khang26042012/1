@@ -55,7 +55,7 @@ jobs:
           ls -la voicecraft-image.tar.gz
 
       - name: Upload image artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: voicecraft-image-${{ inputs.version }}
           path: voicecraft-image.tar.gz
